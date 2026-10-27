@@ -1,0 +1,28 @@
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#0B1018;color:#E8EEF7;font-family:"Pretendard Variable",Pretendard,-apple-system,"Segoe UI","Malgun Gothic",sans-serif;height:100vh;display:grid;grid-template-rows:42% 58%;overflow:hidden}
+.top{display:grid;grid-template-columns:1.45fr 1fr .6fr;gap:18px;padding:18px}
+.lbl{font-size:13px;letter-spacing:.15em;color:#8A97AD;text-transform:uppercase;margin-bottom:6px}
+.lbl b{color:#2DD4BF}
+iframe{width:100%;aspect-ratio:16/9;border:1px solid #223;border-radius:8px;background:#000;pointer-events:none}
+.timers{display:flex;flex-direction:column;gap:10px}
+.t{background:#121A28;border:1px solid #223;border-radius:10px;padding:10px 14px}
+.t small{display:block;font-size:12px;color:#8A97AD;letter-spacing:.05em}
+.t b{display:block;font-size:34px;font-weight:700;font-variant-numeric:tabular-nums;letter-spacing:.02em}
+.t.big b{font-size:48px;color:#2DD4BF}
+.t.warn b{color:#F2A33A}.t.over b{color:#E5484D}
+.btns{display:flex;gap:8px;flex-wrap:wrap}
+button{background:#1B2638;color:#E8EEF7;border:1px solid #2C3A52;border-radius:8px;padding:10px 14px;font-size:14px;cursor:pointer;font-family:inherit}
+button:hover{background:#243247}
+.bottom{display:grid;grid-template-columns:1fr 380px;gap:18px;padding:0 18px 18px;min-height:0}
+.script{background:#0E1626;border:1px solid #223;border-radius:10px;padding:22px 26px;overflow:auto;min-height:0}
+.script h3{font-size:22px;font-weight:700;margin-bottom:6px}
+.script .gov{color:#2DD4BF;font-size:17px;font-weight:600;margin-bottom:18px}
+.script p.line{font-size:21px;line-height:1.65;padding:10px 14px;border-radius:8px;margin-bottom:6px;color:#AAB4C4;transition:background .3s,color .3s}
+.script p.line.cur{background:rgba(45,212,191,.10);color:#fff;border-left:4px solid #2DD4BF}
+.script p.line:last-child{font-weight:700}
+aside{display:flex;flex-direction:column;gap:12px;min-height:0}
+.cue{background:#2A2410;border:1px solid #5A4A14;border-radius:10px;padding:14px 16px}
+.cue h4{font-size:13px;color:#FFD166;letter-spacing:.15em;margin-bottom:6px}
+.cue p{font-size:17px;line-height:1.55;color:#FFF1C2}
+.review{background:#121A28;border:1px solid #223;border-radius:10px;padding:12px 16px;color:#8A97AD;font-size:15px;line-height:1.55}
+.review summary{cursor:pointer;font-weight:600;margin-bottom:6px}

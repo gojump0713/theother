@@ -1,0 +1,10 @@
+# Office lock files
+~$*
+# local tooling / build output
+.claude/
+dist/
+__pycache__/
+*.pyc
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>Presenter — TheOtherDay 2026</title>
+<link rel="stylesheet" href="css/presenter.css">
+</head>
+<body>
+<div class="top">
+  <div class="cur"><div class="lbl">현재 <b id="cur-n"></b> · <span id="cur-f"></span></div><iframe id="cur" src="index.html?presenterview=1"></iframe></div>
+  <div class="nxt"><div class="lbl">다음</div><iframe id="nxt" src="index.html?presenterview=1"></iframe></div>
+  <div class="timers">
+    <div class="t big"><small>전체 경과 / 20:00</small><b id="t-total">00:00</b></div>
+    <div class="t" id="t-slide-box"><small>장 경과 / 목표 <span id="t-target"></span></small><b id="t-slide">00:00</b></div>
+    <div class="t"><small>남은 시간</small><b id="t-left">20:00</b></div>
+    <div class="btns"><button id="b-prev">◀ 이전</button><button id="b-next">다음 ▶</button><button id="b-reset">타이머 리셋 (T)</button></div>
+  </div>
+</div>
+<div class="bottom">
+  <div class="script"><h3 id="s-title"></h3><p class="gov" id="s-gov"></p><div id="s-body"></div></div>
+  <aside>
+    <div class="cue"><h4>진행 힌트</h4><p id="s-cue"></p></div>
+    <details class="review"><summary>검토 메모 (N)</summary><p id="s-review"></p></details>
+  </aside>
+</div>
+<script src="js/content.js"></script>
+<script src="js/presenter.js"></script>
+</body>
+</html>
