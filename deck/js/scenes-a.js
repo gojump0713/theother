@@ -97,7 +97,7 @@ window.SCENES = window.SCENES || [];
         { img: 'I02d_door', h: 'AI를 처음 만나는 사람에게는,<br>계기부터', svc: 'Kstory.ai', cls: 'svc-kstory' },
       ];
       c.innerHTML = head(2, '시작의 문턱', '기술은 넘치는데,\n시작은 왜 여전히 어려울까요?', '기술은 앞서갔습니다. 시작의 문턱은 남았습니다.') +
-        '<div class="cols">' + gates.map((g, i) => '<div class="gate ' + g.cls + '" data-i="' + i + '"><div class="bar"></div><img src="' + IMG(g.img) + '" alt=""><h3>' + g.h + '</h3>' +
+        '<div class="cols">' + gates.map((g, i) => '<div class="gate ' + g.cls + '" data-i="' + i + '"><div class="bar"></div><img data-src="' + IMG(g.img) + '" alt=""><h3>' + g.h + '</h3>' +
           (g.meter ? '<div class="meter">' + '<i></i>'.repeat(10) + '</div><div class="models">ChatGPT · Claude · Gemini · … 계정·요금·사용량 각각</div>' : '') +
           '<div class="svc">' + g.svc + '</div></div>').join('') + '</div>' +
         '<p class="closing" data-f="5">일할 환경, AI를 배울 환경, 비용을 관리하며 활용할 환경, 그리고 첫 경험.<br>이 네 가지 문턱을, 틸론은 서비스로 낮춥니다.</p>' +
@@ -173,8 +173,8 @@ window.SCENES = window.SCENES || [];
       const after = ['필요한 환경을 즉시 이용', '이용 목적과 규모에 따른 선택', '연결된 서비스 경험', '사용자 경험과 성과 중심', '이용 과정에서 지속적인 개선'];
       c.innerHTML = head(4, '서비스 전환', '구축을 끝내는 회사에서,\n사용을 계속 책임지는 회사로', '납품은 한 번이지만, 서비스는 매일 증명됩니다.') +
         '<div class="cmp no-advance" style="--x:95%">' +
-        '<div class="pane before"><img src="' + IMG('I04L_build') + '" alt=""><div class="list"><h4>기존 구축 중심</h4>' + before.map(t => '<p>' + t + '</p>').join('') + '</div></div>' +
-        '<div class="pane after"><img src="' + IMG('I04R_service') + '" alt=""><div class="list"><h4>서비스 중심</h4>' + after.map(t => '<p>' + t + '</p>').join('') + '</div></div>' +
+        '<div class="pane before"><img data-src="' + IMG('I04L_build') + '" alt=""><div class="list"><h4>기존 구축 중심</h4>' + before.map(t => '<p>' + t + '</p>').join('') + '</div></div>' +
+        '<div class="pane after"><img data-src="' + IMG('I04R_service') + '" alt=""><div class="list"><h4>서비스 중심</h4>' + after.map(t => '<p>' + t + '</p>').join('') + '</div></div>' +
         '<div class="handle"></div></div>' +
         '<div class="svcs">' +
         '<span class="svc-space fr" data-f="2"><b>TheOther.Space 2.0</b>업무환경을 설치하는 대신, 클라우드 데스크톱을 이용</span>' +
@@ -205,7 +205,7 @@ window.SCENES = window.SCENES || [];
         { cls: 'svc-kstory', v: 'V05c_s05', h: 'Kstory.ai', s: 'AI 창작', p: '<b>AI 창작</b>의 진입장벽을 낮춥니다.<br>코딩도, 복잡한 프롬프트도 없이 내 이야기를 콘텐츠로.' },
       ];
       c.innerHTML = head(5, '포트폴리오', '세 가지 서비스, 하나의 선언', '기술의 진입장벽은 낮추고, 사용자의 가능성은 높입니다.') +
-        '<div class="cards">' + cards.map((k, i) => '<div class="card ' + k.cls + '" data-i="' + i + '"><video class="card-video" muted loop playsinline preload="none" poster="' + P(k.v) + '" data-src="' + V(k.v) + '"></video><div class="pillar"></div><div class="txt"><h3>' + k.h + '<small>' + k.s + '</small></h3><p>' + k.p + '</p></div></div>').join('') + '</div>' +
+        '<div class="cards">' + cards.map((k, i) => '<div class="card ' + k.cls + '" data-i="' + i + '"><video class="card-video" muted loop playsinline preload="none" data-poster="' + P(k.v) + '" data-src="' + V(k.v) + '"></video><div class="pillar"></div><div class="txt"><h3>' + k.h + '<small>' + k.s + '</small></h3><p>' + k.p + '</p></div></div>').join('') + '</div>' +
         '<div class="q fr" data-f="4"><span class="strike">기술을 어떻게 더 많이 팔 것인가</span> &nbsp;→&nbsp; <span class="ans">더 많은 사람의 시작을 어떻게 앞당길 것인가</span></div>';
       const C = c.querySelectorAll('.card'), q = c.querySelector('.q');
       let focus = -1;

@@ -139,7 +139,7 @@
         '<h2 class="title">AI로 책을 만드는<br>진짜 이유</h2><p class="gov">책을 대신하는 AI가 아니라, 책을 펼치게 하는 AI입니다.</p></div>' +
         '<div class="col-left" style="top:400px"><ul class="list fr" data-f="2"><li class="h">왜 시작하지 못할까요?</li>' +
         ['책에 관심이 없어 첫 장을 펼치지 않는 아이', '아직 글자가 어려워 독서에 참여하지 못하는 아이', '언어가 달라 가족과 같은 책을 읽기 어려운 아이', '자신의 이야기를 표현할 기회를 얻지 못한 사람', 'AI를 활용해 보고 싶지만 무엇부터 할지 모르는 사람'].map((t, i) => '<li class="fr" data-f="2" style="transition-delay:' + (i * .1) + 's">' + t + '</li>').join('') + '</ul></div>' +
-        '<div class="book no-advance"><div class="bvid"><video class="card-video" muted loop playsinline preload="none" poster="' + P('V09_s09') + '" data-src="' + V('V09_s09') + '"></video></div>' +
+        '<div class="book no-advance"><div class="bvid"><video class="card-video" muted loop playsinline preload="none" data-poster="' + P('V09_s09') + '" data-src="' + V('V09_s09') + '"></video></div>' +
         '<div class="page left"><span class="fade">다른 사람의 이야기</span></div>' +
         '<div class="page inner">나의 이야기<small>내가 좋아하는 동물, 우리 가족,<br>내가 다녀온 장소가 등장하는</small></div>' +
         '<div class="page cover"><i></i></div></div>' +
@@ -177,7 +177,7 @@
         '<div class="panel p2 fr no-advance" data-f="2"><h4><i>2</i>읽기 수준<small>어려운 책에서, 내가 읽을 수 있는 책으로</small></h4><div class="row"><span class="lab">연령</span><span class="opt" data-k="level" data-v="5">5세</span><span class="opt sel" data-k="level" data-v="7">7세</span><span class="opt" data-k="level" data-v="9">9세</span></div></div>' +
         '<div class="panel p3 fr no-advance" data-f="3"><h4><i>3</i>음성 낭독<small>읽기 어려워도, 이야기에 닿을 수 있도록</small></h4><div class="row"><button class="play">▶ 들려주기</button><span class="sub" style="font-size:15px">읽는 단어가 하이라이트됩니다 (브라우저 음성 합성)</span></div></div>' +
         '<div class="panel p4 fr no-advance" data-f="4"><h4><i>4</i>다국어<small>서로 다른 언어에서, 함께 읽는 가족으로</small></h4><div class="row"><span class="lab">언어</span><span class="opt sel" data-k="lang" data-v="ko">한국어</span><span class="opt" data-k="lang" data-v="en">English</span><span class="sub" style="font-size:14px;margin-left:10px">※ 추가 언어는 원어민 검수 후 노출</span></div></div>' +
-        '<div class="bookv no-advance"><div class="pic">' + imgs.map(n => '<img data-n="' + n + '" src="' + IMG(n) + '" alt="">').join('') + '</div><div class="txt"><p></p><small></small></div><div class="pg">데모용 샘플 · 실제 서비스 생성 결과가 아닙니다</div></div>' +
+        '<div class="bookv no-advance"><div class="pic">' + imgs.map(n => '<img data-n="' + n + '" data-src="' + IMG(n) + '" alt="">').join('') + '</div><div class="txt"><p></p><small></small></div><div class="pg">데모용 샘플 · 실제 서비스 생성 결과가 아닙니다</div></div>' +
         '<p class="closing" data-f="5" style="bottom:40px;font-size:30px">모두에게 같은 책을 권하는 것에서, 각자에게 맞는 시작을 제공하는 것으로.</p>';
       const P_ = c.querySelector('.bookv .txt p'), sm = c.querySelector('.bookv .txt small'), pics = c.querySelectorAll('.pic img'), play = c.querySelector('.play');
       let utter = null;

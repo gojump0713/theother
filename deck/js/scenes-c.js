@@ -13,7 +13,7 @@
       c.innerHTML = head(11, 'Kstory.ai', '내가 만든 책은,\n다시 읽게 됩니다', '만들다 보니 읽고, 읽다 보니 다시 만듭니다.') +
         '<div class="q"><p>“AI가 책을 만들어주면, 오히려 사람이 읽거나 생각할 일이 줄어드는 것 아닐까요?”</p><p class="a">그래서 만드는 과정에 주목합니다. AI의 결과를 받는 데서 끝나지 않고, 사용자가 읽고 수정하는 과정에 참여하도록 돕는 것입니다.</p></div>' +
         '<div class="cycle"><svg viewBox="0 0 720 720">' + arcs.map(d => '<path d="' + d + '"/>').join('') + '</svg>' +
-        nodes.map((n, i) => '<div class="node n' + (i + 1) + '"><img src="' + IMG(n[0]) + '" alt=""><span>' + n[1] + '</span></div>').join('') +
+        nodes.map((n, i) => '<div class="node n' + (i + 1) + '"><img data-src="' + IMG(n[0]) + '" alt=""><span>' + n[1] + '</span></div>').join('') +
         '<div class="center"><span class="from">이야기를 받는 사람</span><b>→ 만드는 사람</b></div></div>' +
         '<p class="closing" data-f="5">책 한 권을 빠르게 생성하는 것보다,<br>그 책을 통해 한 번 더 읽고 생각하게 하는 것.</p>' +
         '<p class="caption">기대하는 경험이며 실측 효과가 아닙니다. 「…PART2.md」 [20] 읽기를 만들기로.</p>';
@@ -67,7 +67,7 @@
       c.innerHTML = head(13, '기관 도입', '개인의 작품이,\n기관의 교육 자산이 됩니다', null) +
         '<div class="tabs no-advance">' + TABS.map((t, i) => '<span class="tab" data-i="' + i + '">' + t.t + '</span>').join('') + '</div>' +
         '<div class="expect"><span class="badge badge--expect" style="font-size:18px;padding:8px 18px">기대효과 · 측정 성과 아님</span></div>' +
-        '<div class="pic">' + TABS.map(t => '<img src="' + IMG(t.img) + '" alt="">').join('') + '<div class="cap"></div></div>' +
+        '<div class="pic">' + TABS.map(t => '<img data-src="' + IMG(t.img) + '" alt="">').join('') + '<div class="cap"></div></div>' +
         '<div class="effects"></div>' +
         '<p class="closing" data-f="4" style="bottom:36px;font-size:30px">한 번의 체험을 넘어, 기관이 반복해서 운영하고 축적할 수 있는 AI 교육 프로그램으로 발전시키겠습니다.</p>' +
         '<p class="caption" style="bottom:12px">측정된 성과가 아닌 기대효과입니다. 성장기록 등 고도화 기능은 현재 제공 범위와 구분합니다. (PRD §8-6)</p>';
@@ -153,10 +153,10 @@
         { cls: 'svc-kstory', v: 'V16c_s16', svc: 'KSTORY.AI', from: 'AI 동화책', to: 'AI Creative Studio', kw: ['동화책', '성장앨범', '자서전', '수필·소설·시', '음악과 노래', '교육 콘텐츠'] },
       ];
       c.innerHTML = head(16, '미래 방향', 'AI가 일하고,\n누구나 창작하는 다음 세상', '', ' <span class="badge badge--future">중장기 발전 방향 · 현재 제공 기능 아님</span>') +
-        '<div class="cards">' + F.map((f, i) => '<div class="fc ' + f.cls + ' fr" data-f="' + (i + 1) + '"><video class="card-video" muted loop playsinline preload="none" poster="' + P(f.v) + '" data-src="' + V(f.v) + '"></video><div class="txt"><div class="svc">' + f.svc + '</div><div class="from">' + f.from + '</div><div class="to">→ ' + f.to + '</div><div class="kw">' + f.kw.map(k => '<span>' + k + '</span>').join('') + '</div></div></div>').join('') + '</div>' +
+        '<div class="cards">' + F.map((f, i) => '<div class="fc ' + f.cls + ' fr" data-f="' + (i + 1) + '"><video class="card-video" muted loop playsinline preload="none" data-poster="' + P(f.v) + '" data-src="' + V(f.v) + '"></video><div class="txt"><div class="svc">' + f.svc + '</div><div class="from">' + f.from + '</div><div class="to">→ ' + f.to + '</div><div class="kw">' + f.kw.map(k => '<span>' + k + '</span>').join('') + '</div></div></div>').join('') + '</div>' +
         '<p class="line fr" data-f="4">모습은 달라도 방향은 같습니다.<br>더 많은 사람이 자신이 하고 싶은 일을 시작하게 하는 것.</p>' +
         '<div class="beams"><i style="left:25%;background:var(--space)"></i><i style="left:50%;background:var(--town)"></i><i style="left:75%;background:var(--kstory)"></i></div>' +
-        '<div class="final"><video muted playsinline preload="none" poster="' + P('V16_s16') + '" data-src="' + V('V16_s16') + '"></video><div class="shade"></div>' +
+        '<div class="final"><video muted playsinline preload="none" data-poster="' + P('V16_s16') + '" data-src="' + V('V16_s16') + '"></video><div class="shade"></div>' +
         '<div class="msg"><h2><span class="ln"><span>증명한 기술을,</span></span><span class="ln"><span>모두가 누리는 서비스로.</span></span></h2><p>TheOtherDay 2026 &nbsp;·&nbsp; TILON</p></div></div>';
       const cards = c.querySelectorAll('.fc'), fin = c.querySelector('.final'), fv = fin.querySelector('video'), beams = c.querySelectorAll('.beams i'), ln = fin.querySelectorAll('h2 .ln > span'), tag = fin.querySelector('.msg p');
       let timers = [], tl;
